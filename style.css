@@ -1,3 +1,4 @@
+                                                 /*PAGE ACCUEIL*/
 body {
   margin: 0;
   padding: 0;
@@ -645,4 +646,301 @@ body {
     width: 24%;
   }
 
+}
+
+                                              /*MENUS*/
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+                                             /*Header*/
+.header{
+  text-align: center;
+  box-shadow: 0 2px 4px #636363cc;
+  z-index: 2;
+  position: relative;
+}
+
+.header__image__image {
+  justify-content: center;
+  padding-top: 10px;
+  width: 137px;
+}
+
+.header a{
+  color: black;
+  text-decoration: none;
+}
+
+.header i {
+  position: absolute;
+  left: 52px;
+  bottom: 9px;
+}
+                                                    /*Menu*/
+.page main {
+  flex-grow: 1;
+}
+
+.main_menu {
+  background-color: #f6f6f6;
+}
+
+.image{
+  margin: 0 0 -0.3rem 0;
+}
+
+.image img {
+  height: 10rem;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+.main_menu_titre {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  bottom: 1rem;
+  background-color: #f6f6f6;
+}
+
+.main_menu_titre  {
+  padding: 1rem;
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 114%;
+}
+
+
+.main_menu_titre_coeur i {
+  position: absolute;
+  right: 2.5rem;
+  cursor: pointer;
+}
+
+
+.main_menu_titre_coeur .main_menu_titre_coeur_vide:hover {
+  color: transparent;
+  transition: all 0.5s;
+  color: transparent;
+  background: linear-gradient(164deg, #ff79da 0%, #9356dc 80%);
+  -webkit-background-clip: text;
+  font-weight: bold;
+  transition: color 0s;
+
+}
+
+.main_menu_titre_coeur .main_menu_titre_coeur_plein {
+  position: absolute;
+  left: 0rem;
+  -webkit-background-clip: text;
+  opacity: 0;
+  color: transparent;
+  transition: all 0.5s;
+
+}
+
+.main_menu_titre_coeur .main_menu_titre_coeur_plein:hover {
+  opacity: 1;
+  transition: all 0.5s;
+  animation: gradientheart 1s;
+  animation-fill-mode: forwards;
+}
+                                                /*Section*/
+.carte {
+  display: display;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 5%;
+  cursor: pointer;
+}
+
+.carte__menu {
+  width: 95%;
+  margin:auto;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.carte__menu h2 {
+  margin-bottom: 1.5rem;
+}
+
+.underline {
+  display: inline-block;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 5px;
+  width: 4rem;
+}
+
+.carte__menu__plat .anim-1 {
+  animation-delay: 0.2s;
+}
+
+.carte__menu__plat {
+  background-color: white;
+  border-radius: 1rem;
+  /*padding: 1rem;*/
+  margin-top: 14px;
+  overflow: hidden;
+  margin-right: auto;
+  box-shadow: 0 5px 16px #0000002e;
+  position: relative;
+  animation-duration: 1s;
+  animation-name: appear;
+  /*transform: scale(0);*/
+  animation-fill-mode: both;
+  padding-left: 16px;
+  padding-top: 9px;
+  margin-top: 17px;
+}
+
+.carte__menu__plat_prix {
+  display: flex;
+  justify-content: space-between;
+  /*gap: 1rem;
+  max-width: 100%;
+  overflow: hidden;*/
+}
+
+.carte__menu__plat_prix_nom {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carte_menu_plat_prix-prix {
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.5s;
+}
+
+
+.carte__menu__plat_cache {
+  transform: scale(0);
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  border-radius: 0 25px 25px 0;
+}
+
+.carte__menu__plat_cache:hover {
+  animation: upscale 0.8s;
+  animation-iteration-count: 1;
+  transform-origin: 0 100%;
+  margin-left: 10px;
+  animation-fill-mode: forwards;
+}
+.carte__menu__plat_cache i:hover {
+  animation: bigger_size 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.carte__menu__plat_cache i {
+  margin-left: 10px;
+  animation: upscale 0.5s;
+  transform: scale(0);
+  color: #99e2d0;
+  margin: auto;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.carte__menu__plat .anim-2 {
+  animation-delay: 0.4s;
+}
+
+.carte__menu__plat .anim-3 {
+  animation-delay: 0.6s;
+}
+
+.carte__menu__plat .anim-3 {
+  animation-delay: 0.8s;
+}
+
+.carte__menu__plat .anim-3 {
+  animation-delay: 1s;
+}
+
+.carte__menu__plat .anim-3 {
+  animation-delay: 1.2s;
+}
+
+.carte__menu__plat .anim-3 {
+  animation-delay: 1.4s;
+}
+
+.carte__menu__plat .anim-3 {
+  animation-delay: 1.6s;
+}
+
+.carte__menu__plat .anim-3 {
+  animation-delay: 1.8s;
+}
+
+.carte__menu__plat .anim-3 {
+  animation-delay: 2.0s;
+}
+                                                     /*Commander*/
+.btn__commander {
+  padding: 45px;
+  text-align: center;
+}
+
+.btn__commander p {
+  margin: 9px;
+  width: 100px;
+}
+
+
+.btn__commander button {
+  color: white;
+  background: linear-gradient(164deg, #ff79da 0%, #9356dc 80%);
+  border-radius: 24px;
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn__commander :hover {
+  filter: brightness(1.1);
+  box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+  transition: 0.3s ease;
+
+}
+
+/*Responsive pour Desktop*/
+
+
+@media screen and (min-width: 992px) {
+
+  
+  .carte__menu__plat {
+    width: 50%;
+  }
+
+  .carte_menu_plat_prix-prix {
+    margin-left: 147px;
+  }
+
+  .main_menu_titre_coeur i {
+    position: absolute;
+    right: 60rem;
+    cursor: pointer;
+  }
+  
+  .btn__commander {
+    padding: 45px;
+    margin-right: 35rem;
+  }
+
+  .footer {
+    padding-left: 3rem;
+  }
 }
