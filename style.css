@@ -706,49 +706,53 @@ body {
   border-radius: 1rem;
   bottom: 1rem;
   background-color: #f6f6f6;
+  gap: 37px;
 }
 
 .main_menu_titre  {
   padding: 1rem;
-  font-family: "Shrikhand", "sans-serif";
-  font-size: 114%;
 }
 
+.main_menu_titre h1 {
+  font-family: 'Shrikhand';
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 29px;
+}
 
-.main_menu_titre_coeur i {
-  position: absolute;
-  right: 2.5rem;
+.main_menu_titre .gradient_heart {
+  padding-right: 40px;
+  font-size: 24px;
+}
+
+.gradient_heart:hover {
   cursor: pointer;
-}
-
-
-.main_menu_titre_coeur .main_menu_titre_coeur_vide:hover {
-  color: transparent;
-  transition: all 0.5s;
-  color: transparent;
-  background: linear-gradient(164deg, #ff79da 0%, #9356dc 80%);
-  -webkit-background-clip: text;
-  font-weight: bold;
-  transition: color 0s;
-
-}
-
-.main_menu_titre_coeur .main_menu_titre_coeur_plein {
-  position: absolute;
-  left: 0rem;
-  -webkit-background-clip: text;
-  opacity: 0;
-  color: transparent;
-  transition: all 0.5s;
-
-}
-
-.main_menu_titre_coeur .main_menu_titre_coeur_plein:hover {
-  opacity: 1;
-  transition: all 0.5s;
   animation: gradientheart 1s;
   animation-fill-mode: forwards;
 }
+
+.gradient_heart {
+  margin-right: 30px;
+}
+
+@keyframes gradientheart {
+  0% {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  opacity: 0.2;
+  }
+
+  100% {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  }
+}
+
                                                 /*Section*/
 .carte {
   display: display;
@@ -779,23 +783,32 @@ body {
 .carte__menu__plat .anim-1 {
   animation-delay: 0.2s;
 }
+.carte__menu__plat:hover {
+  cursor: pointer;
+}
 
 .carte__menu__plat {
+  display: flex;
   background-color: white;
-  border-radius: 1rem;
-  /*padding: 1rem;*/
   margin-top: 14px;
   overflow: hidden;
   margin-right: auto;
   box-shadow: 0 5px 16px #0000002e;
+  border-radius: 1rem;
   position: relative;
   animation-duration: 1s;
   animation-name: appear;
-  /*transform: scale(0);*/
   animation-fill-mode: both;
-  padding-left: 16px;
-  padding-top: 9px;
   margin-top: 17px;
+  height: 80px;
+}
+
+.carte__menu__plat p .carte__menu__plat_prix_nom_titre {
+  margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 20px;
 }
 
 .carte__menu__plat_prix {
@@ -822,16 +835,35 @@ body {
 
 
 .carte__menu__plat_cache {
-  transform: scale(0);
   background-color: #99e2d0;
   display: flex;
   align-items: center;
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 1rem 1rem 0;
+  width: 65px;
+  height: 100%;
+  overflow: hidden;
+  transform: translateX(66px);
+  transition-duration: 0.1s;
+  justify-content: center;
 }
 
+/*.carte__menu__plat__cache {
+    position: absolute;
+    background-color: #99e2d0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+    border-radius: 0 1rem 1rem 0;
+    transform: translateX(66px);
+    overflow: hidden;
+    transition-duration: 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
 .carte__menu__plat_cache:hover {
   animation: upscale 0.8s;
-  animation-iteration-count: 1;
   transform-origin: 0 100%;
   margin-left: 10px;
   animation-fill-mode: forwards;
@@ -843,12 +875,9 @@ body {
 }
 
 .carte__menu__plat_cache i {
-  margin-left: 10px;
   animation: upscale 0.5s;
-  transform: scale(0);
-  color: #99e2d0;
+  color: white;
   margin: auto;
-  background-color: white;
   border-radius: 100%;
 }
 
