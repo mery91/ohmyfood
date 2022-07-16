@@ -790,17 +790,27 @@ body {
 .carte__menu__plat {
   display: flex;
   background-color: white;
-  margin-top: 14px;
+  /*margin-top: 14px;*/
   overflow: hidden;
   margin-right: auto;
   box-shadow: 0 5px 16px #0000002e;
   border-radius: 1rem;
   position: relative;
-  animation-duration: 1s;
+  /*animation-duration: 1s;
   animation-name: appear;
-  animation-fill-mode: both;
+  animation-fill-mode: both;*/
   margin-top: 17px;
   height: 80px;
+}
+@keyframes appear {
+0% {
+  opacity: 0;
+  transform:translateY(70px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0px);
+}
 }
 
 .carte__menu__plat p .carte__menu__plat_prix_nom_titre {
@@ -817,6 +827,8 @@ body {
   /*gap: 1rem;
   max-width: 100%;
   overflow: hidden;*/
+  padding-top: 10px;
+
 }
 
 .carte__menu__plat_prix_nom {
@@ -843,25 +855,11 @@ body {
   height: 100%;
   overflow: hidden;
   transform: translateX(66px);
-  transition-duration: 0.1s;
+  /*transition-duration: 0.1s;*/
   justify-content: center;
+  transition: all 0.5s ease-in-out;
 }
 
-/*.carte__menu__plat__cache {
-    position: absolute;
-    background-color: #99e2d0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 65px;
-    border-radius: 0 1rem 1rem 0;
-    transform: translateX(66px);
-    overflow: hidden;
-    transition-duration: 0.1s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
 .carte__menu__plat_cache:hover {
   animation: upscale 0.8s;
   transform-origin: 0 100%;
