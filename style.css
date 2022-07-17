@@ -862,6 +862,10 @@ body {
   bottom: 0;
 
 }
+.carte__menu__plat:hover .carte_menu_plat_prix-prix {
+  margin-right: 65px;
+  transition: 0.5s ease-in-out;
+}
 
 .carte__menu__plat:hover .carte__menu__plat_cache {
  transform: translateX(0px);
@@ -972,3 +976,32 @@ body {
     padding-left: 3rem;
   }
 }
+
+/*Responsive pour Tablette*/
+
+@media screen and (min-width:768px) and (max-width:991px) {
+
+  .carte__menu__plat {
+    width: 50%;
+  }
+
+  .carte_menu_plat_prix-prix {
+    margin-left: 147px;
+  }
+
+  .main_menu_titre_coeur i {
+    position: absolute;
+    right: 60rem;
+    cursor: pointer;
+  }
+  
+  .btn__commander {
+    padding: 45px;
+    margin-right: 35rem;
+  }
+
+  .footer {
+    padding-left: 3rem;
+  }
+}
+
