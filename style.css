@@ -382,6 +382,13 @@ body {
   color: white;
 }
 
+.footer__contenu {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+} 
+
+
 .footer__contenu__lien {
   color: white;
   text-decoration: none;
@@ -692,7 +699,7 @@ body {
 }
 
 .image img {
-  height: 10rem;
+  height: 241px;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
@@ -703,8 +710,9 @@ body {
 .main_menu_titre {
   display: flex;
   align-items: center;
-  border-radius: 1rem;
-  bottom: 1rem;
+  border-radius: 45px 45px 0 0;
+  position: relative;
+  bottom: 3rem;
   background-color: #f6f6f6;
   gap: 37px;
 }
@@ -717,13 +725,13 @@ body {
   font-family: 'Shrikhand';
   font-weight: lighter;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: 16px;
   font-size: 29px;
 }
 
 .main_menu_titre .gradient_heart {
-  padding-right: 40px;
   font-size: 24px;
+  padding-top: 20px;
 }
 
 .gradient_heart:hover {
@@ -742,7 +750,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  opacity: 0.2;
   }
 
   100% {
@@ -790,7 +797,6 @@ body {
 .carte__menu__plat {
   display: flex;
   background-color: white;
-  /*margin-top: 14px;*/
   overflow: hidden;
   margin-right: auto;
   box-shadow: 0 5px 16px #0000002e;
@@ -800,7 +806,7 @@ body {
   animation-name: appear;
   animation-fill-mode: both;
   margin-top: 17px;
-  height: 80px;
+  height: 76px;
 }
 @keyframes appear {
 0% {
@@ -821,13 +827,21 @@ body {
   margin-left: 20px;
 }
 
+.carte__menu__plat_prix_nom p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .carte__menu__plat_prix {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
   padding-left: 10px;
   width: 93%;
-
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .carte__menu__plat_prix_nom {
@@ -840,7 +854,6 @@ body {
   font-weight: bold;
   justify-content: center;
   display: flex;
-  align-items: center;
   transition-duration: 0.5s;
 }
 
@@ -882,6 +895,19 @@ body {
   color: white;
   margin: auto;
   border-radius: 100%;
+}
+
+@keyframes quarter-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.carte__menu__plat_cache i:hover {
+  animation: quarter-spin 1s ease-in-out;
 }
 
 .carte__menu__plat .anim-2 {
@@ -955,10 +981,8 @@ body {
   
   .carte__menu__plat {
     width: 50%;
-  }
+ 
 
-  .carte_menu_plat_prix-prix {
-    margin-left: 147px;
   }
 
   .main_menu_titre_coeur i {
@@ -983,11 +1007,9 @@ body {
 
   .carte__menu__plat {
     width: 50%;
+   
   }
 
-  .carte_menu_plat_prix-prix {
-    margin-left: 147px;
-  }
 
   .main_menu_titre_coeur i {
     position: absolute;
