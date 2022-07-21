@@ -729,35 +729,45 @@ body {
   font-size: 29px;
 }
 
-.main_menu_titre .gradient_heart {
+.hover_hearts i {
   font-size: 24px;
   padding-top: 20px;
 }
 
-.gradient_heart:hover {
-  cursor: pointer;
-  animation: gradientheart 1s;
-  animation-fill-mode: forwards;
+.hover_hearts .menu__coeurvide {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 0;
 }
 
-.gradient_heart {
-  margin-right: 30px;
+.hover_hearts {
+  position: relative;
 }
 
-@keyframes gradientheart {
-  0% {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+.hover_hearts .menu__coeurvide:hover {
+  color: transparent;
+  transition: all 0.5s;
+  color: transparent;
+  background: linear-gradient(164deg, #ff79da 0%, #9356dc 80%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: bold;
-  }
+  transition: all 0.3s;
 
-  100% {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+}
+
+.hover_hearts .menu__coeurplein {
+  position: absolute;
+  left: 0rem;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  }
+  opacity: 0;
+  color: transparent;
+  transition: all 0.3s;
+
+}
+
+.hover_hearts .menu__coeurplein:hover{
+  opacity: 1;
+  transition: all 0.3s;
 }
 
                                                 /*Section*/
@@ -984,7 +994,7 @@ body {
 
   }
 
-  .main_menu_titre_coeur i {
+  .hover_hearts i {
     position: absolute;
     right: 60rem;
     cursor: pointer;
@@ -1010,7 +1020,7 @@ body {
   }
 
 
-  .main_menu_titre_coeur i {
+  .hover_hearts i {
     position: absolute;
     right: 60rem;
     cursor: pointer;
