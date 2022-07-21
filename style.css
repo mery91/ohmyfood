@@ -905,8 +905,7 @@ body {
     transform: rotate(0);
   }
 }
-
-.carte__menu__plat_cache i:hover {
+ .carte__menu__plat:hover .carte__menu__plat_cache i{
   animation: quarter-spin 1s ease-in-out;
 }
 
