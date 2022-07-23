@@ -320,6 +320,7 @@ body {
   transition: all 0.5s;
   background: linear-gradient(164deg, #ff79da 0%, #9356dc 80%);
   background-clip: text;
+  -webkit-background-clip: text;
   font-weight: bold;
   opacity: 1;
 }
@@ -327,11 +328,15 @@ body {
 .resto__coeur .resto__coeurplein {
   position: absolute;
   left: 0rem;
-  -webkit-background-clip: text;
   opacity: 0;
   color: transparent;
   transition: all 0.5s;
 
+}
+
+.resto__coeur:hover .resto__coeurvide {
+  color: transparent;
+  transition: all 0.5s;
 }
 
 
@@ -624,42 +629,6 @@ body {
   margin-bottom: 0px;
   margin-top: 16px;
   font-size: 29px;
-}
-
-.hover_hearts i {
-  font-size: 24px;
-  padding-top: 20px;
-}
-
-.hover_hearts .menu__coeurvide {
-  position: absolute;
-  bottom: -1.2rem;
-  right: 0;
-}
-
-.hover_hearts {
-  position: relative;
-}
-
-.hover_hearts:hover .menu__coeurvide {
-  color: transparent;
-  transition: all 0.3s;
-}
-
-
-.hover_hearts .menu__coeurplein {
-  position: absolute;
-  background: linear-gradient(164deg, #ff79da 0%, #9356dc 80%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  color: transparent;
-  transition: all 0.3s;
-}
-
-.hover_hearts:hover .menu__coeurplein{
-  opacity: 1;
-  transition: all 0.3s;
 }
 
 .main__menu__titre__coeur{
